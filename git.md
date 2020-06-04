@@ -19,7 +19,7 @@ When developing a software application, SCM gives us the following essential fea
 
 > Git is a free and open source **distributed version control system** designed to handle everything from small to very large projects with speed and efficiency.
 
-* [Donwload and install Git](https://git-scm.com)
+* [Download and install Git](https://git-scm.com)
 * After install open a terminal:
     - Mac: CMD + Space and type terminal, hit enter
     - Windows: Hit the windows key and type 'git bash', hit enter
@@ -28,6 +28,13 @@ When developing a software application, SCM gives us the following essential fea
 
 ```bash
 git --version
+```
+
+## Set up Git
+
+```
+git config --global user.name "Your Name"
+git config --global user.email "your@email.com"
 ```
 
 ## Using Git
@@ -72,7 +79,6 @@ git status
 
 * After running **git init** we don't longer see an error
 * Now we find out that we'll be using **branches**, **commits** & **add**ing files
-* Open the folder `nodebc` using VSC (Visual Studio Code)
 * Git creates a hidden folder to keep track of our project
 * List your folder files to see the `.git` folder
 
@@ -85,7 +91,10 @@ ls -la
 ```
 
 * Create a new file and save it with the name **index.html**
-* Add the following content:
+* `touch index.html`
+* open it for edit (Use your favorite text editor, or just vim :) )
+* `vim index.html`
+* Copy the following content:
 
 ```html
 <!DOCTYPE html>
@@ -99,8 +108,11 @@ ls -la
   </body>
 </html>
 ```
-
-* Make sure to save the file again
+* If on vim (It will be just an empty black screen), right click and paste
+- More commands [here for vim](https://coderwall.com/p/adv71w/basic-vim-commands-for-getting-started)
+* Make sure to save the file again 
+* to save the file on vim
+	- git `ESC`, then type `:wq!` and hit enter
 * Go to the terminal and check Git status
 
 ```bash
@@ -385,10 +397,14 @@ Date:   Sun Jan 5 19:11:24 2020 -0800
 * Now we have an empty project again but with git history
 
 #### Create a local and remote repo
+* Navigate to your home folder `cd ~`
 * Create a new folder called **devopsbc**
+* Navigate into it `cd devopsbc`
+* Init the git repo `git init`
 * Create a **hello-world.py** file
 
 ```bash
+git init
 touch hello-world.py
 ```
 * Add a Hello World print message to it
@@ -435,11 +451,11 @@ git commit -m 'Added hello-world'
 * By doing this we are versioning our first python script
 
 
-## Github
+## GitHub
 * Go to [github.com](https://github.com)
-* Create a new Github account
-* Create a new project with the name `devopsbc`
-* Once you create a new project Github will show you all the possible options that we have
+* Create a new GitHub account
+* Create a `new repository` (click on the plus sign at the right top corner of the GitHub website) with the name `devopsbc`
+* Once you create a new repository GitHub will show you all the possible options that we have
 * As we already created a project we can run the following commands
 * Copy the URL generated with the **.git** in the end
 
@@ -449,7 +465,7 @@ git commit -m 'Added hello-world'
 git remote add origin https://github.com/YOUR_GITHUB_NAME/devopsbc.git
 ```
 
-* By executing this command we're configuring a remote git server (github)
+* By executing this command we're configuring a remote git server (GitHub)
 * We run the **git remote** commands to work with a remote server
 * Then we are adding a new server so we have **add**
 * Origin is the default name by convention for our main source
@@ -475,7 +491,7 @@ origin	https://github.com/YOUR_GITHUB_NAME/devopsbc.git (push)
 * Now I can see that I have **fetch** & **push** permission
 * We use **fetch** to get changes from the server
 * We use **push** to push our changes to the server
-* Push your local code changes to the Github server
+* Push your local code changes to the GitHub server
 
 ```bash
 git push origin master
@@ -490,12 +506,12 @@ To github.com:YOUR_GITHUB_NAME/devopsbc.git
  * [new branch]      master -> master
 ```
 
-* If we refresh our Github page we'll see that our file is now part of the Github project
+* If we refresh our GitHub page we'll see that our file is now part of the GitHub repository
 * Click on the file to see its contents
 * Now go back to the project home page
 * Click on commits
-* Now you can see you commits history in a web page
-* To setup our Github project it's nice to add a README.md file as initial project file
+* Now you can see your commits history in a web page
+* To setup our GitHub repository it's nice to add a README.md file as initial project file
 * Create a README.md file at the root level
 
 ```bash
@@ -509,7 +525,7 @@ To github.com:YOUR_GITHUB_NAME/devopsbc.git
 ```
 # DevOps BC
 
-This project it's to learn DevOps
+This project is to learn DevOps
 
 1. [Hello world](hello-world.py)
 ```
@@ -534,7 +550,7 @@ git status
 git add .
 ```
 
-* By using a dot `.` we let Git know that we want to add all the files that we changed
+* By using a dot `.` we let Git knows that we want to add all the files that we changed
 * Check Git status
 
 ```bash
@@ -568,8 +584,8 @@ git log
 * The last commit shows (HEAD -> master)
 * The previous one (origin/master)
 * So it looks like our local project is ahead 1 commit from origin (our remote server)
-* Check on Github commits to see if you have the latest commit
-* As we don't have it we need to push it
+* Check on GitHub commits to see if you have the latest commit
+* As we don't have it, we need to push it
 
 ```bash
 git push origin master
@@ -583,10 +599,10 @@ git push origin master
 >   c74bf4d..98db347  master -> master
 ```
 
-* Now check your commits on Github
+* Now check your commits on GitHub
 * Also take a look at the project home page
 * As you can see we can add a home page for our projects
-* To learn more about Github Markdown read [Github Mastering Markdown guide](https://guides.github.com/features/mastering-markdown/)
+* To learn more about GitHub Markdown read [GitHub Mastering Markdown guide](https://guides.github.com/features/mastering-markdown/)
 
 ## git clone
 * This command clone a repository into a new directory
@@ -659,7 +675,7 @@ git commit -m 'Added python exercises link to README.md'
 
 * So at this moment we have 2 folders that have the same project
 * The test_cloning one has one more commit that the initial `devopsbc` one
-* Push your code to the Github server
+* Push your code to the GitHub server
 
 ```bash
 git push origin master
@@ -674,7 +690,7 @@ git push origin master
 >    98db347..1678975  master -> master
 ```
 
-* Now we have the changes in the test_cloning or devopsbc folder and on the Github server
+* Now we have the changes in the test_cloning or devopsbc folder and on the GitHub server
 * We still need to update our initial `devopsbc`
 * Lets change directory to the previous folder
 
@@ -719,29 +735,38 @@ git log
 ```
 
 * Now our local folder is in sync with the server
-* Create a **python** folder at the root level
-* Add this folder to git
-* Commit your changes
-* Push your changes to the origin server
+* Create a **python** folder (`mkdir python`) at the root level
+* Add this folder to git: `git add .`
+* Commit your changes `git commit -m "Adding python folder"`
+* Push your changes to the origin server `git push origin master`
 * Now you'll be able to add your python exercises into this **python** folder and git will version them
-* Happy coding and I hope you like using Git and Github!
+* Happy coding and I hope you like using Git and GitHub!
 * Checkout the great [Octocats](https://octodex.github.com)
 
 ## Final notes
 * We'll work on our local project by creating and updating files
-* Once we are happy with our code we'll have to add all the files to `stage` (`git add .` or `git add flename`)
+* Once we are happy with our code we'll have to add all the files to `stage` (`git add .` or `git add filename`)
 * Then we'll need to commit (`git commit -m 'Commit Message'`)
-* If we have a Github project and we want to share/update it we'll have to run `git push origin master`
+* If we have a GitHub project and we want to share/update it we'll have to run `git push origin master`
 * If someone else updates our remote server we'll have to run `git fetch origin master` to get the latest changes
 * We'll do this workflow many times so get used to it and remember to check `git status` to know what's going on
 
-## Git & Github Assets
+## Branches & PR & Fork
+
+### General git flow
+
+![General git flow](images/git/general-git-flow.png)
+
+### Pull vs Fetch
+![Pull vs Fetch](images/git/pullvsfetchandmerge.png)
+
+## Git & GitHub Assets
 * [Git Reference](https://git-scm.com/docs)
 * [Git Free book](https://git-scm.com/book/en/v2)
-* [Github Git cheat sheet](https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf)
+* [GitHub Git cheat sheet](https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf)
 * [Visual cheat sheet](http://ndpsoftware.com/git-cheatsheet.html#loc=;)
-* [Github](https://github.com)
-* [Github Hello World](https://guides.github.com/activities/hello-world)
-* [Github Guides](https://www.youtube.com/githubguides)
+* [GitHub](https://github.com)
+* [GitHub Hello World](https://guides.github.com/activities/hello-world)
+* [GitHub Guides](https://www.youtube.com/githubguides)
 
 [<- Go Back](README.md)

@@ -16,7 +16,7 @@
 - [Setup](setup.md)
 
 ### Week 3
-- Logic
+- [Logic](logic.md)
 - Python
 
 ### Week 4
@@ -26,7 +26,7 @@
 ### Week 5
 - Networking
 
-#Walk 
+## Walk 
 ### Week 6
 - Virtualization
 - CI/CD
