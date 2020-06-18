@@ -7,10 +7,10 @@ What we will install:
 2) [Ubuntu Linux](#installing-ubuntu-linux)
 3) [Python 3](#python)
 4) [Docker](#docker)
-5) Jenkins
-6) Ansible
+5) [Jenkins](#jenkins)
+6) [Ansible](#ansible)
 7) Git VCS
-8) Setup our cloud console on AWS.
+8) Setup our cloud console on [AWS](#aws-account).
 
 - **Resources**
 1. [What is a virtual machine (what is virtualization)](https://www.youtube.com/watch?v=yIVXjl4SwVo)
@@ -97,7 +97,7 @@ Let's update the apt packages as this will be needed for all installations:
 
 1. Install Docker:
     *TL;DR* 
-    - run `apt install curl`
+    - run `sudo apt install curl`
     - run: `sudo apt install apt-transport-https ca-certificates curl software-properties-common`
     - run: `curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -`
     - run: `sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic test"`
